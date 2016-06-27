@@ -120,12 +120,14 @@ if(count($csvn) > 1){
         unlink("changes.csv","r");
         sleep(2);
         $changes = fopen("changes.csv","w");
+        //currently being written as "read-only"
     }
     
     //if file does not exist, write one
     else {
 
         $changes = fopen("changes.csv","w");
+        //currently being written as read-only
     }
 
     //iterate over all options in associative array
